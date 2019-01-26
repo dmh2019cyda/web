@@ -3,6 +3,9 @@ const pkg = require('./package')
 
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
+const withImages = require('next-images')
+module.exports = withImages()
+
 module.exports = {
   mode: 'universal',
 
