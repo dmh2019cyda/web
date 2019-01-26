@@ -1,21 +1,7 @@
 <template>
   <div>
     <v-select v-bind:items="items" v-model="selected" label="Select a language"></v-select>
-    <v-btn 
-        v-show="!recording"
-        color="success"
-        @click="start"
-    >
-        Start Recording
-    </v-btn>
-    <v-btn 
-        v-show="recording"
-        color="warning"
-        @click="end"
-    >
-        Stop Recording
-    </v-btn>
-    <v-btn color="info" @onTranscriptionEnd="onSummit">Summit</v-btn>
+    <v-btn color="info" @click="onSummit">Summit</v-btn>
     <vue-speech 
         v-show="recording"
         :lang="selected"
@@ -91,17 +77,6 @@ export default {
             console.log("lastSentence: " + lastSentence);
             console.log("transcription: " + transcription.join(' '))
             this.transcription = transcription
-        },
-        start(){
-            this.recording = true
-            console.log(this.recording)
-            this.transcription = []
-            this.final_transcription = ''
-        },
-        end(){
-            this.recording = false
-            console.log(this.recording)
-            this.final_transcription = this.transcription.join(' ')
         },
         onSummit(){
             

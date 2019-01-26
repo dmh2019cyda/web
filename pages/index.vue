@@ -37,14 +37,15 @@
           </v-btn> -->
 
 
-          <div 
-            slot="activator"
-            @click="clickImg"
-          >
-            <v-img
-              src="/gif/3.gif"
-            ></v-img>
-          </div>
+            <div 
+              slot="activator"
+              @click="clickImg"
+            >
+            </div>
+
+              <v-img
+                src="/gif/3.gif"
+              ></v-img>
 
           <v-card>
             <v-card-title
