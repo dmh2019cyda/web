@@ -25,7 +25,7 @@
             <v-container fill-height fluid>
                 <v-layout fill-height>
                 <v-flex xs12 align-end flexbox>
-                    <span class="headline">食</span>
+                    <span class="display-4">食</span>
                 </v-flex>
                 </v-layout>
             </v-container>
@@ -38,13 +38,17 @@
         </v-card-title>
 
         <v-card-text>
-            <p class="headline">我今日食左碗牛肉麵，好彈牙，下次一定會再黎食。之後去咗公園睇人捉棋。最後返屋企，我現時自己肯做飯。</p>
+            <p class="display-1">我今日食左碗牛肉麵，好彈牙，下次一定會再黎食。之後去咗公園睇人捉棋。最後返屋企，我現時自己肯做飯。</p>
+
+            <v-divider light></v-divider>
+
             <p class="headline">Sentimemt Analysis</p>
             <v-progress-linear
                 color="success"
                 height="20"
                 value="86.12321019172668"
             ></v-progress-linear>
+
 
             <div class="headline">Summary</div>
             <p class="subheading">我今日食左碗牛肉麵，好彈牙，下次一定會再黎食。</p>
@@ -53,7 +57,7 @@
             <v-chip label color="blue" text-color="white">
                 <v-icon left>label</v-icon>飲食
             </v-chip>
-            <br>
+
             <div class="headline">Related Topics</div>
             <v-chip label color="pink" text-color="white">
                 <v-icon left>label</v-icon>美食餐飲
@@ -163,7 +167,7 @@ export default {
         onSummit(){
 
             axios.post('http://ailab-test-api-lb.wisers.com/senti/sentiment/document', {
-                text: '我今日好開心'
+                text: '我今日食左碗牛肉麵，好彈牙，下次一定會再黎食。之後去咗公園睇人捉棋。最後返屋企，我現時自己肯做飯。'
             })
             .then(function (response) {
                 console.log(response);
