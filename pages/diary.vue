@@ -6,7 +6,7 @@
     <v-dialog
       v-model="dialog1"
       width="800"
-      persistent=false
+      persistent
     >
       <v-btn
         slot="activator"
