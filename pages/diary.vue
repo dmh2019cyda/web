@@ -6,6 +6,7 @@
     <v-dialog
       v-model="dialog1"
       width="800"
+      persistent=false
     >
       <v-btn
         slot="activator"
@@ -24,7 +25,7 @@
             <v-container fill-height fluid>
                 <v-layout fill-height>
                 <v-flex xs12 align-end flexbox>
-                    <span class="headline"></span>
+                    <span class="headline">食</span>
                 </v-flex>
                 </v-layout>
             </v-container>
@@ -38,7 +39,7 @@
 
         <v-card-text>
             <p class="headline">我今日食左碗牛肉麵，好彈牙，下次一定會再黎食。之後去咗公園睇人捉棋。最後返屋企，我現時自己肯做飯。</p>
-            <p class="title">Sentimemt Analysis</p>
+            <p class="headline">Sentimemt Analysis</p>
             <v-progress-linear
                 color="success"
                 height="20"
@@ -76,7 +77,7 @@
             @click="dialog1 = false"
           >
           <router-link to="/" tag="button">
-            Summit
+            Submit
           </router-link>
           </v-btn>
         </v-card-actions>

@@ -41,37 +41,37 @@
                   <v-avatar>
                     <img src="/badge/1.png">
                   </v-avatar>
-                  11
+                  Leisure People
                 </v-chip>
                 <v-chip>
                   <v-avatar>
                     <img src="/badge/2.png">
                   </v-avatar>
-                  11
+                  Explorer
                 </v-chip>
                 <v-chip>
                   <v-avatar>
                     <img src="/badge/3.png">
                   </v-avatar>
-                  11
+                  Senior Explorer
                 </v-chip>
                 <v-chip>
                   <v-avatar>
                     <img src="/badge/4.png">
                   </v-avatar>
-                  11
+                  Adventurer
                 </v-chip>
                 <v-chip>
                   <v-avatar>
                     <img src="/badge/5.png">
                   </v-avatar>
-                  11
+                  Senior Adventurer
                 </v-chip>
                 <v-chip>
                   <v-avatar>
                     <img src="/badge/6.png">
                   </v-avatar>
-                  11
+                  Traveller
                 </v-chip>
               </div>
             </v-card-text>
