@@ -9,7 +9,7 @@
       sm8
       md6
     >
-      
+
       <v-card>
         <v-card-title class="headline">Welcome to the Vuetify + Nuxt.js template</v-card-title>
         <v-card-text>
@@ -29,24 +29,6 @@
           v-model="dialog"
           width="500"
         >
-          <!-- <v-btn
-            slot="activator"
-            color="red lighten-2"
-          >
-            button
-          </v-btn> -->
-
-
-            <div 
-              slot="activator"
-              @click="clickImg"
-            >
-            </div>
-
-              <v-img
-                src="/gif/3.gif"
-              ></v-img>
-
           <v-card>
             <v-card-title
               class="headline grey lighten-2"
@@ -56,8 +38,103 @@
             </v-card-title>
 
             <v-card-text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              <v-layout>
+                <div v-if="Math.random() > 0.5">
+                  <v-img
+                    src="/badge/1.png"
+                    height="50px"
+                    width="50px"
+                    contain="true"
+                  ></v-img>
+                </div>
+                <div v-else>
+                  <v-img
+                    src="/badge/locked.png"
+                    height="50px"
+                    width="50px"
+                    contain="true"
+                  ></v-img>
+                </div>
+                <div v-if="Math.random() > 0.5">
+                  <v-img
+                    src="/badge/2.png"
+                    height="50px"
+                    width="50px"
+                    contain="true"
+                  ></v-img>
+                </div>
+                <div v-else>
+                  <v-img
+                    src="/badge/locked.png"
+                    height="50px"
+                    width="50px"
+                    contain="true"
+                  ></v-img>
+                </div><div v-if="Math.random() > 0.5">
+                  <v-img
+                    src="/badge/3.png"
+                    height="50px"
+                    width="50px"
+                    contain="true"
+                  ></v-img>
+                </div>
+                <div v-else>
+                  <v-img
+                    src="/badge/locked.png"
+                    height="50px"
+                    width="50px"
+                    contain="true"
+                  ></v-img>
+                </div><div v-if="Math.random() > 0.5">
+                  <v-img
+                    src="/badge/4.png"
+                    height="50px"
+                    width="50px"
+                    contain="true"
+                  ></v-img>
+                </div>
+                <div v-else>
+                  <v-img
+                    src="/badge/locked.png"
+                    height="50px"
+                    width="50px"
+                    contain="true"
+                  ></v-img>
+                </div><div v-if="Math.random() > 0.5">
+                  <v-img
+                    src="/badge/5.png"
+                    height="50px"
+                    width="50px"
+                    contain="true"
+                  ></v-img>
+                </div>
+                <div v-else>
+                  <v-img
+                    src="/badge/locked.png"
+                    height="50px"
+                    width="50px"
+                    contain="true"
+                  ></v-img>
+                </div><div v-if="Math.random() > 0.5">
+                  <v-img
+                    src="/badge/6.png"
+                    height="50px"
+                    width="50px"
+                    contain="true"
+                  ></v-img>
+                </div>
+                <div v-else>
+                  <v-img
+                    src="/badge/locked.png"
+                    height="50px"
+                    width="50px"
+                    contain="true"
+                  ></v-img>
+                </div>
+              </v-layout>
             </v-card-text>
+
+
 
             <v-divider></v-divider>
 
@@ -73,6 +150,12 @@
             </v-card-actions>
           </v-card>
         </v-dialog>
+
+        <v-img
+          @click="clickImg"
+          src="/gif/3.gif"
+        ></v-img>
+        
       </div>
     </v-flex>
   </v-layout>
@@ -95,8 +178,7 @@ export default {
     clickImg(){
       var random = require('random-name')
       this.name = random()
-      this.dialog = false
-      console.log("hihi")
+      this.dialog = true
     }
   }
 }

@@ -2,14 +2,12 @@
   <div>
     <v-select v-bind:items="items" v-model="selected" label="Select a language"></v-select>
     <v-btn color="info" @click="onSummit">Summit</v-btn>
+    <br>
     <vue-speech 
         v-show="recording"
         :lang="selected"
         @onTranscriptionEnd="onEnd"
     />
-    <br>
-    <p v-show="!recording">{{ final_transcription }}</p>
-    
   </div>
 </template>
 
@@ -23,7 +21,7 @@ Vue.use(VueSpeech)
 export default {
     data(){
         return {
-            recording: false,
+            recording: true,
             selected: 'yue-Hant-HK',
             transcription: [],
             final_transcription: '',
