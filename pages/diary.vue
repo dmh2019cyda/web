@@ -1,19 +1,17 @@
 <template>
   <div>
     <v-select v-bind:items="items" v-model="selected" label="Select a language"></v-select>
-    <!-- <v-btn color="info" @click="onSummit">Summit</v-btn> -->
 
     <v-dialog
       v-model="dialog1"
       width="800"
-      persistent
     >
       <v-btn
         slot="activator"
         color="green lighten-2"
         dark
       >
-        Summit
+        Submit
       </v-btn>
 
       <v-card>
@@ -53,7 +51,7 @@
             <div class="headline">Summary</div>
             <p class="subheading">我今日食左碗牛肉麵，好彈牙，下次一定會再黎食。</p>
 
-            <div class="headline">Root Topics</div>
+            <div class="headline">Root Topic</div>
             <v-chip label color="blue" text-color="white">
                 <v-icon left>label</v-icon>飲食
             </v-chip>
@@ -164,7 +162,7 @@ export default {
             console.log("transcription: " + transcription.join(' '))
             this.transcription = transcription
         },
-        onSummit(){
+        onSubmit(){
 
             axios.post('http://ailab-test-api-lb.wisers.com/senti/sentiment/document', {
                 text: '我今日食左碗牛肉麵，好彈牙，下次一定會再黎食。之後去咗公園睇人捉棋。最後返屋企，我現時自己肯做飯。'
