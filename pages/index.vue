@@ -11,15 +11,13 @@
     >
 
       <v-card>
-        <v-card-title class="headline">Welcome to the Vuetify + Nuxt.js template</v-card-title>
+        <v-card-title class="headline">Welcome to CYDA Community!</v-card-title>
         <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
-          <p>For more information on Vuetify, check out the <a
-            href="https://vuetifyjs.com"
-            target="_blank"
-          >documentation</a>.</p>
+          
+          <p>Take some time to look out of the window, feel the blue sky and the fresh air.</p>
+          <p>Now share with me anything that come into your mind. What have you eaten? How was your day? I am excited to know it!</p>
           <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
+            <em><small>&mdash; CYDA</small></em>
           </div>
         </v-card-text>
       </v-card>
@@ -34,104 +32,48 @@
               class="headline grey lighten-2"
               primary-title
             >
-              {{ name }}
+              {{ name }} ({{ place }})
             </v-card-title>
 
             <v-card-text>
-              <v-layout>
-                <div v-if="Math.random() > 0.5">
-                  <v-img
-                    src="/badge/1.png"
-                    height="50px"
-                    width="50px"
-                    contain="true"
-                  ></v-img>
-                </div>
-                <div v-else>
-                  <v-img
-                    src="/badge/locked.png"
-                    height="50px"
-                    width="50px"
-                    contain="true"
-                  ></v-img>
-                </div>
-                <div v-if="Math.random() > 0.5">
-                  <v-img
-                    src="/badge/2.png"
-                    height="50px"
-                    width="50px"
-                    contain="true"
-                  ></v-img>
-                </div>
-                <div v-else>
-                  <v-img
-                    src="/badge/locked.png"
-                    height="50px"
-                    width="50px"
-                    contain="true"
-                  ></v-img>
-                </div><div v-if="Math.random() > 0.5">
-                  <v-img
-                    src="/badge/3.png"
-                    height="50px"
-                    width="50px"
-                    contain="true"
-                  ></v-img>
-                </div>
-                <div v-else>
-                  <v-img
-                    src="/badge/locked.png"
-                    height="50px"
-                    width="50px"
-                    contain="true"
-                  ></v-img>
-                </div><div v-if="Math.random() > 0.5">
-                  <v-img
-                    src="/badge/4.png"
-                    height="50px"
-                    width="50px"
-                    contain="true"
-                  ></v-img>
-                </div>
-                <div v-else>
-                  <v-img
-                    src="/badge/locked.png"
-                    height="50px"
-                    width="50px"
-                    contain="true"
-                  ></v-img>
-                </div><div v-if="Math.random() > 0.5">
-                  <v-img
-                    src="/badge/5.png"
-                    height="50px"
-                    width="50px"
-                    contain="true"
-                  ></v-img>
-                </div>
-                <div v-else>
-                  <v-img
-                    src="/badge/locked.png"
-                    height="50px"
-                    width="50px"
-                    contain="true"
-                  ></v-img>
-                </div><div v-if="Math.random() > 0.5">
-                  <v-img
-                    src="/badge/6.png"
-                    height="50px"
-                    width="50px"
-                    contain="true"
-                  ></v-img>
-                </div>
-                <div v-else>
-                  <v-img
-                    src="/badge/locked.png"
-                    height="50px"
-                    width="50px"
-                    contain="true"
-                  ></v-img>
-                </div>
-              </v-layout>
+              <div class="text-xs-center">
+                <v-chip>
+                  <v-avatar>
+                    <img src="/badge/1.png">
+                  </v-avatar>
+                  11
+                </v-chip>
+                <v-chip>
+                  <v-avatar>
+                    <img src="/badge/2.png">
+                  </v-avatar>
+                  11
+                </v-chip>
+                <v-chip>
+                  <v-avatar>
+                    <img src="/badge/3.png">
+                  </v-avatar>
+                  11
+                </v-chip>
+                <v-chip>
+                  <v-avatar>
+                    <img src="/badge/4.png">
+                  </v-avatar>
+                  11
+                </v-chip>
+                <v-chip>
+                  <v-avatar>
+                    <img src="/badge/5.png">
+                  </v-avatar>
+                  11
+                </v-chip>
+                <v-chip>
+                  <v-avatar>
+                    <img src="/badge/6.png">
+                  </v-avatar>
+                  11
+                </v-chip>
+              </div>
             </v-card-text>
 
 
@@ -145,7 +87,7 @@
                 flat
                 @click="dialog = false"
               >
-                I accept
+                Close
               </v-btn>
             </v-card-actions>
           </v-card>
@@ -164,6 +106,8 @@
 <script>
 import Logo from '~/components/Logo.vue'
 
+
+
 export default {
   components: {
     Logo,
@@ -171,13 +115,36 @@ export default {
   data () {
     return {
       dialog: false,
-      name: 'jj'
+      name: 'jj',
+      placeid: 0,
+      place: '',
+      places: [
+        'Central and Western',
+        'Eastern',
+        'Southern',
+        'Wan Chai',
+        'Sham Shui Po',
+        'Kowloon City',
+        'Kwun Tong',
+        'Wong Tai Sin',
+        'Yau Tsim Mong',
+        'Islands',
+        'Kwai Tsing',
+        'North',
+        'Sai Kung',
+        'Sha Tin',
+        'Tai Po',
+        'Tsuen Wan',
+        'Tuen Mun',
+        'Yuen Long',
+      ]
     }
   },
   methods:{
     clickImg(){
       var random = require('random-name')
-      this.name = random()
+      this.name = random.first()
+      this.place = this.places[Math.floor(Math.random() * Math.floor(18))];
       this.dialog = true
     }
   }
