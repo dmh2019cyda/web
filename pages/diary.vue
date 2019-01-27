@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-select v-bind:items="items" v-model="selected" label="Select a language"></v-select>
-    <v-btn color="info" @click="onSummit">Summit</v-btn>
+    <!-- <v-btn color="info" @click="onSummit">Summit</v-btn> -->
 
     <v-dialog
       v-model="dialog1"
@@ -10,10 +10,10 @@
     >
       <v-btn
         slot="activator"
-        color="red lighten-2"
+        color="green lighten-2"
         dark
       >
-        Demo1
+        Summit
       </v-btn>
 
       <v-card>

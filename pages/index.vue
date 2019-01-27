@@ -39,37 +39,67 @@
               <div class="text-xs-center">
                 <v-chip>
                   <v-avatar>
-                    <img src="/badge/1.png">
+                    <div v-if="Math.floor(Math.random() * Math.floor(2))">
+                      <img src="/badge/1.png">
+                    </div>
+                    <div v-else>
+                      <img src="/badge/locked.png">
+                    </div>
                   </v-avatar>
                   Leisure People
                 </v-chip>
                 <v-chip>
                   <v-avatar>
-                    <img src="/badge/2.png">
+                    <div v-if="Math.floor(Math.random() * Math.floor(2))">
+                      <img src="/badge/2.png">
+                    </div>
+                    <div v-else>
+                      <img src="/badge/locked.png">
+                    </div>
                   </v-avatar>
                   Explorer
                 </v-chip>
                 <v-chip>
                   <v-avatar>
-                    <img src="/badge/3.png">
+                    <div v-if="Math.floor(Math.random() * Math.floor(2))">
+                      <img src="/badge/3.png">
+                    </div>
+                    <div v-else>
+                      <img src="/badge/locked.png">
+                    </div>
                   </v-avatar>
                   Senior Explorer
                 </v-chip>
                 <v-chip>
                   <v-avatar>
-                    <img src="/badge/4.png">
+                    <div v-if="Math.floor(Math.random() * Math.floor(2))">
+                      <img src="/badge/4.png">
+                    </div>
+                    <div v-else>
+                      <img src="/badge/locked.png">
+                    </div>
                   </v-avatar>
                   Adventurer
                 </v-chip>
                 <v-chip>
                   <v-avatar>
-                    <img src="/badge/5.png">
+                    <div v-if="Math.floor(Math.random() * Math.floor(2))">
+                      <img src="/badge/5.png">
+                    </div>
+                    <div v-else>
+                      <img src="/badge/locked.png">
+                    </div>
                   </v-avatar>
                   Senior Adventurer
                 </v-chip>
                 <v-chip>
                   <v-avatar>
-                    <img src="/badge/6.png">
+                    <div v-if="Math.floor(Math.random() * Math.floor(2))">
+                      <img src="/badge/6.png">
+                    </div>
+                    <div v-else>
+                      <img src="/badge/locked.png">
+                    </div>
                   </v-avatar>
                   Traveller
                 </v-chip>
@@ -144,7 +174,8 @@ export default {
     clickImg(){
       var random = require('random-name')
       this.name = random.first()
-      this.place = this.places[Math.floor(Math.random() * Math.floor(18))];
+      this.placeid = Math.floor(Math.random() * Math.floor(18))
+      this.place = this.places[this.placeid]
       this.dialog = true
     }
   }
